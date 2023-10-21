@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - s3-site
+      -s3-site-using-module
 
 jobs:
   s3-site-branch-job:
@@ -32,6 +33,8 @@ jobs:
 
     - name: Terraform Apply
       run: terraform apply -auto-approve
+
+
 
 s3-site-using-module-branch-job:
     name: Terraform deploy from ${{ github.ref }}
