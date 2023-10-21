@@ -15,4 +15,10 @@ terraform {
       version = "~> 5.6.2"
     }
   }
+  backend "s3" {
+    bucket="test33aa"
+    key="terraform/s3-site"
+    region="us-east-1"
+    
+  }
 }
